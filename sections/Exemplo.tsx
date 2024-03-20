@@ -7,5 +7,5 @@ export default function Exemplo({ text }: Props) {
     <div>
       <h1>{text}</h1>
     </div>
-  )
+  );
 }

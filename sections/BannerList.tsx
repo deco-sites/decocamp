@@ -14,7 +14,7 @@ export interface Props {
 }
 
 export default function BannerList(props: Props) {
-  console.log(props)
+  console.log(props);
 
   return (
     <div class="bg-primary p-4">
@@ -22,10 +22,12 @@ export default function BannerList(props: Props) {
       {props.description && <p class="text-gray-600">{props.description}</p>}
       <ul class="mt-4">
         {props.items.map((item, index) => (
-          <li key={index} class={`${item.color ?? "text-gray-800"}`}>{item.text}</li>
+          <li key={index} class={`${item.color ?? "text-gray-800"}`}>
+            {item.text}
+          </li>
         ))}
       </ul>
       {props.quote && <p>{props.quote.data}</p>}
     </div>
-  )
+  );
 }
